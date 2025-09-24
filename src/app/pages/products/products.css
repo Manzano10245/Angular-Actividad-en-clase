@@ -1,0 +1,110 @@
+.products {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.products h1 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #0077ff;
+  font-weight: 700;
+}
+
+/* Contenedor grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Tarjeta */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Imagen */
+.img-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texto */
+.product-card h2 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-card .desc {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product-card .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+/* Botones */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* Botón carrito */
+.btn-cart {
+  background: #f1f1f1;
+  color: #333;
+}
+
+.btn-cart:hover {
+  background: #e0e0e0;
+}
+
+/* Botón comprar */
+.btn-buy {
+  background: #0077ff;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-buy:hover {
+  background: #005fcc;
+}
