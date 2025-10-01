@@ -1,102 +1,15 @@
-<!-- Sección principal de productos -->
-<section class="products">
-  <!-- Título de la sección -->
-  <h1>Nuestros Productos</h1>
-
-  <!-- Contenedor de la cuadrícula de productos -->
-  <div class="product-grid">
-
-    <!-- Tarjeta individual de producto -->
-    <div class="product-card">
-      <!-- Contenedor de la imagen -->
+<section class="productos">
+  @for(producto of productos; track producto.id){
+    <article class="producto">
       <div class="img-container">
-        <!-- Imagen del producto -->
-        <img src="/imagenes/3.jpg" alt="Producto 1">
+        <img [src]="producto.imagen" [alt]="producto.nombre">
       </div>
-      <!-- Nombre del producto -->
-      <h2>Producto 1</h2>
-      <!-- Descripción breve del producto -->
-      <p class="desc">Un juguete clásico que nunca pasa de moda.</p>
-      <!-- Precio del producto -->
-      <p class="price">$29.990</p>
-      <!-- Contenedor de botones de acción -->
+      <h3>{{producto.nombre}}</h3>
+      <p class="desc">{{producto.descripcion}}</p>
+      <strong class="price">{{producto.precio}}</strong>
       <div class="actions">
-        <!-- Botón para agregar al carrito -->
-        <button class="btn-cart">Agregar al carrito</button>
-        <!-- Botón para comprar ahora -->
-        <button class="btn-buy">Comprar ahora</button>
+        <button class="btn-cart">Ver más</button>
       </div>
-    </div>
-
-    <!-- Tarjeta de producto 2 -->
-    <div class="product-card">
-      <div class="img-container">
-        <img src="/imagenes/5.jpg" alt="Producto 2">
-      </div>
-      <h2>Producto 2</h2>
-      <p class="desc">Diversión asegurada para toda la familia.</p>
-      <p class="price">$34.990</p>
-      <div class="actions">
-        <button class="btn-cart">Agregar al carrito</button>
-        <button class="btn-buy">Comprar ahora</button>
-      </div>
-    </div>
-
-    <!-- Tarjeta de producto 3 -->
-    <div class="product-card">
-      <div class="img-container">
-        <img src="/imagenes/6.jpg" alt="Producto 3">
-      </div>
-      <h2>Producto 3</h2>
-      <p class="desc">Ideal para regalar y coleccionar.</p>
-      <p class="price">$24.990</p>
-      <div class="actions">
-        <button class="btn-cart">Agregar al carrito</button>
-        <button class="btn-buy">Comprar ahora</button>
-      </div>
-    </div>
-
-    <!-- Tarjeta de producto 4 -->
-    <div class="product-card">
-      <div class="img-container">
-        <img src="/imagenes/7.jpg" alt="Producto 3">
-      </div>
-      <h2>Producto 4</h2>
-      <p class="desc">Ideal para regalar y coleccionar.</p>
-      <p class="price">$54.990</p>
-      <div class="actions">
-        <button class="btn-cart">Agregar al carrito</button>
-        <button class="btn-buy">Comprar ahora</button>
-      </div>
-    </div>
-
-    <!-- Tarjeta de producto 5 -->
-    <div class="product-card">
-      <div class="img-container">
-        <img src="/imagenes/8.jpg" alt="Producto 3">
-      </div>
-      <h2>Producto 5</h2>
-      <p class="desc">Ideal para regalar y coleccionar.</p>
-      <p class="price">$74.990</p>
-      <div class="actions">
-        <button class="btn-cart">Agregar al carrito</button>
-        <button class="btn-buy">Comprar ahora</button>
-      </div>
-    </div>
-
-    <!-- Tarjeta de producto 6 -->
-    <div class="product-card">
-      <div class="img-container">
-        <img src="/imagenes/9.jpg" alt="Producto 3">
-      </div>
-      <h2>Producto 6</h2>
-      <p class="desc">Ideal para regalar y coleccionar.</p>
-      <p class="price">$34.990</p>
-      <div class="actions">
-        <button class="btn-cart">Agregar al carrito</button>
-        <button class="btn-buy">Comprar ahora</button>
-      </div>
-    </div>
-
-  </div>
+    </article>
+  }
 </section>

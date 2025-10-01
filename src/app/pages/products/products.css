@@ -1,26 +1,15 @@
-.products {
+/* Contenedor principal */
+.productos {
   padding: 40px 20px;
   max-width: 1200px;
   margin: auto;
-  text-align: center;
-}
-
-.products h1 {
-  font-size: 2.2rem;
-  margin-bottom: 30px;
-  color: #0077ff;
-  font-weight: 700;
-}
-
-/* Contenedor grid */
-.product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
 }
 
 /* Tarjeta */
-.product-card {
+.producto {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -32,7 +21,7 @@
   justify-content: space-between;
 }
 
-.product-card:hover {
+.producto:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
@@ -53,19 +42,19 @@
 }
 
 /* Texto */
-.product-card h2 {
+.producto h3 {
   font-size: 1.3rem;
   margin: 10px 0;
   color: #333;
 }
 
-.product-card .desc {
+.producto .desc {
   font-size: 0.95rem;
   color: #666;
   margin-bottom: 10px;
 }
 
-.product-card .price {
+.producto .price {
   font-size: 1.2rem;
   font-weight: bold;
   color: #28a745;
@@ -75,7 +64,7 @@
 /* Botones */
 .actions {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -90,21 +79,11 @@
 
 /* Botón carrito */
 .btn-cart {
-  background: #f1f1f1;
-  color: #333;
-}
-
-.btn-cart:hover {
-  background: #e0e0e0;
-}
-
-/* Botón comprar */
-.btn-buy {
   background: #0077ff;
   color: white;
   font-weight: 600;
 }
 
-.btn-buy:hover {
+.btn-cart:hover {
   background: #005fcc;
 }
